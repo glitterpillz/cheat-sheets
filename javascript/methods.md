@@ -187,7 +187,6 @@ document.removeEventListener('click', (event) => {
 | **keydown** | key is pressed down |
 | **keyup** | key is released |
 
--
 
 | Form Events | |
 | ----------- | --- |
@@ -198,7 +197,6 @@ document.removeEventListener('click', (event) => {
 | **submit** | fires on form when submitted |
 | **reset** | fires on form is reset |
 
--
 
 | Mouse Events | |
 | ------------ | --- |
@@ -209,7 +207,6 @@ document.removeEventListener('click', (event) => {
 | **mouseover** | mouse button enter an element |
 | **mousemove** | mouse pointer moves over on element |
 
--
 
 | Window Events | |
 | ------------- | --- |

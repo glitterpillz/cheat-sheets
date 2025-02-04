@@ -253,37 +253,37 @@ with MyContext() as my_context:
 
 ## 🧵 String Methods
 
-- Lowercase - ```lower()```
+- Lowercase → ```lower()```
     ```python
     "Python".lower()    # "python"
     ```
 
-- Uppercase - ```upper()``` 
+- Uppercase → ```upper()``` 
     ```python
     "Python".upper()    # "PYTHON"
     ```
 
-- Remove leading/trailing characters - ```strip()``` 
+- Remove leading/trailing characters → ```strip()``` 
     ```python
     " Python ".strip()  # "Python"
     ```
 
-- Split by separator - ```split([sep])``` 
+- Split by separator → ```split([sep])``` 
     ```python
     "Python is cool".split(" ")    # ['Python', 'is', 'cool']
     ```
 
-- Replace substring - ```replace(old, new[, count])``` 
+- Replace substring → ```replace(old, new[, count])``` 
     ```python
     "Pythin".replace("i", "o")  # "Python"
     ```
 
-- Find substring index - ```find(sub[, start][, end])```
+- Find substring index → ```find(sub[, start][, end])```
     ```python
     "Python is cool".find("cool")   # 10
     ```
 
-- Format string - ```format(*args, **kwargs)```
+- Format string → ```format(*args, **kwargs)```
     ```python
     name = "Cosmo"
     language - "Python"
@@ -293,4 +293,64 @@ with MyContext() as my_context:
     # OR
 
     greeting = "Hello, my name is {name} and I love {language}!".format(name="Cosmo", language="Python")
+    ```
+
+
+<br></br>
+
+## 📃 List Methods
+
+- Add item to end → ```append(item)```
+    ```python
+    lst = [1, 2, 3]
+    lst.append(4)   # lst = [1, 2, 3, 4]
+    ```
+
+- Add elements of iterable - ```extend(iterable)```
+    ```python
+    lst = [1, 2, 3]
+    lst.extend([4, 5, 6])   # lst = [1, 2, 3, 4, 5, 6]
+    ```
+
+- Insert item at index - ```insert(index, item)```
+    ```python
+    lst = [1, 2, 3]
+    lst.insert(1, 99)   # lst = [1, 99, 2, 3]
+    ```
+
+- Remove first occurrence - ```remove(item)```
+    ```python
+    lst = [1, 2, 3, 2]
+    lst.remove(2)   # lst = [1, 3, 2] (only removes 1st '2')
+    ```
+
+- Remove & return item - ```pop([index])```
+    ```python
+    lst = [1, 2, 3]
+    last_item = lst.pop()   # last_item = 3 | lst = [1, 2]
+    second_item = lst.pop(1)    # second_item = 2 | lst = [1]
+    ```
+
+- Find item index - ```index(item[, start][, end])```
+    ```python
+    lst = [10, 20, 30, 40, 30]
+    idx = lst.index(30)     # idx = 2 (first occurrence)
+    idx2 = lst.index(30, 3)     # idx2 = 4 (finds 30 starting from index 3)
+    ```
+
+- Count occurrences - ```count(item)```
+    ```python
+    lst = [1, 2, 3, 2, 2, 4]
+    count - lst.count(2)    # count = 3 (2 appears three times)
+    ```
+
+- Sort list - ```sort([key][, reverse])```
+    ```python
+    lst = [3, 2, 4, 1, 5, 9]
+    lst.sort()      # lst = [1, 1, 3, 4, 5, 9]
+
+    lst.sort(reverse=True)  # lst = [9, 5, 4, 3, 1, 1]
+
+    fruits = ["banana", "apple", "cherry"]
+    fruits.sort(key=len)    # sort by length → words = ["apple", "banana", "cherry"]
     ```
