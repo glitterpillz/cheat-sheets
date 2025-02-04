@@ -253,29 +253,44 @@ with MyContext() as my_context:
 
 ## 🧵 String Methods
 
-- lowercase - ```lower()```
+- Lowercase - ```lower()```
     ```python
     "Python".lower()    # "python"
     ```
 
-- uppercase - ```upper()``` 
+- Uppercase - ```upper()``` 
     ```python
     "Python".upper()    # "PYTHON"
     ```
 
-- remove leading/trailing characters - ```strip()``` 
+- Remove leading/trailing characters - ```strip()``` 
     ```python
     " Python ".strip()  # "Python"
     ```
 
-- ```split([sep])``` - split by separator
+- Split by separator - ```split([sep])``` 
     ```python
     "Python is cool".split(" ")    # ['Python', 'is', 'cool']
     ```
 
-- ```replace(old, new[, count])``` - replace substring
+- Replace substring - ```replace(old, new[, count])``` 
     ```python
     "Pythin".replace("i", "o")  # "Python"
     ```
 
-- ```
+- Find substring index - ```find(sub[, start][, end])```
+    ```python
+    "Python is cool".find("cool")   # 10
+    ```
+
+- Format string - ```format(*args, **kwargs)```
+    ```python
+    name = "Cosmo"
+    language - "Python"
+
+    greeting = "Hello, my name is {} amd I love {}!".format(name, language)
+
+    # OR
+
+    greeting = "Hello, my name is {name} and I love {language}!".format(name="Cosmo", language="Python")
+    ```
