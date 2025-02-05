@@ -21,7 +21,7 @@ comment'''
 
 ## 🔤 Data Types
 
-- Primitive
+### Primitive
     ```python
     str = "Your mom"    # string
 
@@ -32,7 +32,7 @@ comment'''
     bool = True     # boolean
     ```
 
-- Collections
+### Collections
     ```python
     list = [1, 2, 3]
 
@@ -228,62 +228,62 @@ with MyContext() as my_context:
 
 ## 🛠️ Built-in Functions
 
-- ```len(obj)``` → length of object
+### ```len(obj)``` → length of object
 
-- ```sum(iterable[, start])``` → sum of elements
+### ```sum(iterable[, start])``` → sum of elements
 
-- ```max(iterable[, key])``` → maximum element
+### ```max(iterable[, key])``` → maximum element
 
-- ```min(iterable[, key])``` → minimum element
+### ```min(iterable[, key])``` → minimum element
 
-- ```sorted(iterable[, key][, reverse])``` → sorted list
+### ```sorted(iterable[, key][, reverse])``` → sorted list
 
-- ```range(stop[, start][, step])``` → sequence of numbers
+### ```range(stop[, start][, step])``` → sequence of numbers
 
-- ```zip(*iterables)``` → iterator of tuples
+### ```zip(*iterables)``` → iterator of tuples
 
-- ```map(function, iterable)``` → apply function to all items
+### ```map(function, iterable)``` → apply function to all items
 
-- ```filter(function, iterable)``` → filter elements by function
+### ```filter(function, iterable)``` → filter elements by function
 
-- ```isinstance(obj, classInfo)``` → check object's class
+### ```isinstance(obj, classInfo)``` → check object's class
 
 
 <br></br>
 
 ## 🧵 String Methods
 
-- Lowercase → ```lower()```
+### ```lower()``` → lowercase 
     ```python
     "Python".lower()    # "python"
     ```
 
-- Uppercase → ```upper()``` 
+### ```upper()``` → uppercase 
     ```python
     "Python".upper()    # "PYTHON"
     ```
 
-- Remove leading/trailing characters → ```strip()``` 
+### ```strip()``` → remove leading/trailing characters
     ```python
     " Python ".strip()  # "Python"
     ```
 
-- Split by separator → ```split([sep])``` 
+### ```split([sep])``` → split by separator  
     ```python
     "Python is cool".split(" ")    # ['Python', 'is', 'cool']
     ```
 
-- Replace substring → ```replace(old, new[, count])``` 
+### ```replace(old, new[, count])``` → replace substring
     ```python
     "Pythin".replace("i", "o")  # "Python"
     ```
 
-- Find substring index → ```find(sub[, start][, end])```
+### ```find(sub[, start][, end])``` → find substring index
     ```python
     "Python is cool".find("cool")   # 10
     ```
 
-- Format string → ```format(*args, **kwargs)```
+### ```format(*args, **kwargs)``` → format string
     ```python
     name = "Cosmo"
     language - "Python"
@@ -300,51 +300,51 @@ with MyContext() as my_context:
 
 ## 📃 List Methods
 
-- Add item to end → ```append(item)```
+### ```append(item)``` → add item to end 
     ```python
     lst = [1, 2, 3]
     lst.append(4)   # lst = [1, 2, 3, 4]
     ```
 
-- Add elements of iterable - ```extend(iterable)```
+### ```extend(iterable)``` → add elements of iterable
     ```python
     lst = [1, 2, 3]
     lst.extend([4, 5, 6])   # lst = [1, 2, 3, 4, 5, 6]
     ```
 
-- Insert item at index - ```insert(index, item)```
+### ```insert(index, item)``` → insert item at index 
     ```python
     lst = [1, 2, 3]
     lst.insert(1, 99)   # lst = [1, 99, 2, 3]
     ```
 
-- Remove first occurrence - ```remove(item)```
+### ```remove(item)``` → remove first occurrence 
     ```python
     lst = [1, 2, 3, 2]
     lst.remove(2)   # lst = [1, 3, 2] (only removes 1st '2')
     ```
 
-- Remove & return item - ```pop([index])```
+### ```pop([index])``` → remove & return item
     ```python
     lst = [1, 2, 3]
     last_item = lst.pop()   # last_item = 3 | lst = [1, 2]
     second_item = lst.pop(1)    # second_item = 2 | lst = [1]
     ```
 
-- Find item index - ```index(item[, start][, end])```
+### ```index(item[, start][, end])``` → find item index
     ```python
     lst = [10, 20, 30, 40, 30]
     idx = lst.index(30)     # idx = 2 (first occurrence)
     idx2 = lst.index(30, 3)     # idx2 = 4 (finds 30 starting from index 3)
     ```
 
-- Count occurrences - ```count(item)```
+### ```count(item)``` → count occurrences
     ```python
     lst = [1, 2, 3, 2, 2, 4]
     count - lst.count(2)    # count = 3 (2 appears three times)
     ```
 
-- Sort list - ```sort([key][, reverse])```
+### ```sort([key][, reverse])``` → sort list 
     ```python
     lst = [3, 2, 4, 1, 5, 9]
     lst.sort()      # lst = [1, 1, 3, 4, 5, 9]
@@ -354,3 +354,78 @@ with MyContext() as my_context:
     fruits = ["banana", "apple", "cherry"]
     fruits.sort(key=len)    # sort by length → words = ["apple", "banana", "cherry"]
     ```
+
+### ```reverse()``` → reverse list 
+    ```python
+    lst = [1, 2, 3, 4]
+    lst.reverse()   # lst = [4, 3, 2, 1]
+    ```
+
+<br></br>
+
+## 📖 Dictionary Methods
+
+### ```keys()``` → view list of keys 
+    ```python
+    cat = {"name": "Cosmo", "age": 10, "city": "Fairfax"}
+    keys = cat.keys()   # dict_keys(['name', 'age', 'city'])
+    ```
+
+### ```values()``` → view list of values
+    ```python
+    values = cat.values()   # dict_values(['Cosmo', 10, 'Fairfax'])
+    ```
+
+### ```items()``` → view key-value pairs
+    ```python
+    items = cat.items()     # dict_items([('name', 'Cosmo'), ('age')])
+    ```
+
+### ```get(key[, default])``` → get value for key
+    ```python
+    age = cat.get("age")    # 10
+    toys = cat.get("toys", "Not specified")     # "Not specified" (default value)
+    ```
+
+### ```update([other])``` → update dictionary
+    ```python
+    cat.update({"toys": ["mouse", "bird"], "city": "Tallahassee"})  # cat = {'name': 'Cosmo', 'age': 10, 'city': 'Tallahassee', 'toys': ['mouse', 'bird']}
+    ```
+
+### ```pop(key[, default])``` → remove & return value
+    ```python
+    age = cat.pop("age")    # 10 (removes 'age' from the dictionary)
+    missing = cat.pop("behavior", "Not provided")   # "Not provided" (default value)
+    ```
+
+### ```clear()``` → remove all items
+    ```python
+    cat.clear()     # cat = {}
+    ```
+
+
+<br></br>
+
+## 🔢 Set Methods
+
+### ```add(item)``` - add item
+
+### ```update(iterable)``` - add elements of iterable
+
+### ```discard(item)``` - remove item if present
+
+### ```remove(item)``` - remove item or raise KeyError
+
+### ```pop()``` - remove & return item
+
+### ```clear()``` - remove all items
+
+### ```union(*others)``` - union of sets
+
+### ```intersection(*others)``` - intersection of sets
+
+### ```difference(*others)``` - difference of sets
+
+### ```issubset(other)``` - check if subset
+
+### ```issuperset(other)``` - check if superset
