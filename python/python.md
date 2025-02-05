@@ -1,6 +1,5 @@
 # 🐍 PYTHON - CHEAT SHEET
 
-
 <br></br>
 
 ## 📚 Fundamentals
