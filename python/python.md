@@ -1,6 +1,6 @@
 # 🐍 PYTHON - CHEAT SHEET
 
-<br></br>
+<br><br>
 
 ## 📚 Fundamentals
 
@@ -16,7 +16,7 @@ comment'''
 ```
 
 
-<br></br>
+<br><br>
 
 ## 🔤 Data Types
 
@@ -47,7 +47,7 @@ dict = {"key": "value"}  # dictionary
 ```
 
 
-<br></br>
+<br><br>
 
 ## 📋 Operators
 
@@ -62,7 +62,7 @@ dict = {"key": "value"}  # dictionary
 - Identity: ```is``` ```is not```
 
 
-<br></br>
+<br><br>
 
 ## 🔀 Conditionals
 
@@ -73,7 +73,7 @@ dict = {"key": "value"}  # dictionary
 - Else: ```else:```
 
 
-<br></br>
+<br><br>
 
 ## ➿ Loops
 
@@ -86,7 +86,7 @@ dict = {"key": "value"}  # dictionary
 - Continue: ```continue```
 
 
-<br></br>
+<br><br>
 
 ## ⚙️ Functions
 
@@ -105,7 +105,7 @@ def func(*args, **kwargs):
 ```
 
 
-<br></br>
+<br><br>
 
 ## 🏛️ Classes & Objects
 
@@ -139,7 +139,7 @@ def method(self):
 ```
 
 
-<br></br>
+<br><br>
 
 ## 🚨 Error Handling
 
@@ -154,7 +154,7 @@ finally:    # finally
 ```
 
 
-<br></br>
+<br><br>
 
 ## 📑 Importing Libraries
 
@@ -165,7 +165,7 @@ finally:    # finally
 - Specific import - ```from math import pi```
 
 
-<br></br>
+<br><br>
 
 ## 📂 File I/O
 
@@ -178,21 +178,21 @@ finally:    # finally
 - Append - ```with open("file.txt", "a") as file:```
 
 
-<br></br>
+<br><br>
 
 ## 📜 List Comprehensions
 
 - Syntax - ```[expression for item in iterable if condition]```
 
 
-<br></br>
+<br><br>
 
 ## 📝 Lambda Functions
 
 - Syntax - ```lambda arguments: expression```
 
 
-<br></br>
+<br><br>
 
 ## 🔌 Iterators & Generators
 
@@ -208,7 +208,7 @@ finally:    # finally
 - Generator expression - ```(expression for item in iterable if condition)```
 
 
-<br></br>
+<br><br>
 
 ## 🔍 Context Managers
 
@@ -227,7 +227,7 @@ with MyContext() as my_context:
 ```
 
 
-<br></br>
+<br><br>
 
 ## 🛠️ Built-in Functions
 
@@ -252,9 +252,9 @@ with MyContext() as my_context:
 - ```isinstance(obj, classInfo)``` → check object's class
 
 
-<br></br>
+<br><br>
 
-## 🧵 String Methods
+## 🪡 String Methods
 
 ### ```lower()``` → lowercase 
 ```python
@@ -311,7 +311,7 @@ greeting = "Hello, my name is {name} and I love {language}!".format(name="Cosmo"
 ```
 
 
-<br></br>
+<br><br>
 
 ## 📃 List Methods
 
@@ -447,7 +447,7 @@ cat.clear()     # cat = {}
 ```
 
 
-<br></br>
+<br><br>
 
 ## 🔢 Set Methods
 
@@ -551,7 +551,8 @@ is_superset = big.issuperset(small)
 # True ('big' contains all elements of 'small')
 ```
 
-<br></br>
+
+<br><br>
 
 ## 🖼️ Regular Expressions (```re``` module)
 
@@ -645,4 +646,112 @@ re.findall(r"^Hello", "Hello, world!")
 
 re.findall(r"end$", "The story will end")  
 # ['end'] (matches only if "end" is at the end)
+```
+
+
+<br><br>
+
+## 🎨 Decorators
+
+- **Defining** → ```def my_decorator(func):```
+
+- **Applying** → ```@my_decorator```
+
+
+<br><br>
+
+## 📦 Modules & Packages
+
+- **Creating a module** → Save as ```.py``` file
+
+- **Importing a module** → ```import my_module```
+
+- **Creating a package** → Create directory with ```__init__.py```
+
+- **Importing from a package** → ```from my_package import my_module```
+
+
+<br><br>
+
+## 💻 Virtual Environments
+
+- **Creating** → ```python -m venv myenv```
+
+- **Activating**
+    - **Windows** → ```myenv\Scripts\activate```
+    - **Unix/Mac** → ```source myenv/bin/activate```
+
+- **Deactivating** → ```deactivate```
+
+
+<br><br>
+
+## 🎁 Package Management (pip)
+
+- **Install** → ```pip install package_name```
+
+- **Uninstall** → ```pip uninstall package_name```
+
+- **Upgrade** → ```pip install --upgrade package_name```
+
+- **List installed packages** → ```pip list```
+
+- **Show package details** → ```pip show package_name```
+
+
+<br><br>
+
+## ⌛ Date & Time
+
+- **Common format codes** → ```%Y``` ```%m``` ```%d``` ```%H``` ```%M``` ```%S```
+
+```python
+import datetime
+
+datetime.datetime.now()     # Current date & time
+
+datetime.date(year, month, day)     # Date object
+
+datetime.time(hour, minute, second, microsecond)    # Time object
+
+datetime.datetime.strftime(format)  # Format
+
+datetime.datetime.strptime(date_string, format)     # Parse
+```
+
+
+<br><br>
+
+## 📢 JSON
+
+```python
+import json
+
+json.loads(json_string)     # JSON to Python
+
+json.dumps(obj)     # Python to JSON
+
+json.load(file)     # Read from file
+
+json.dump(obj, file)    # Write to file
+```
+
+
+<br><br>
+
+## 🧵 Threading
+
+- The ```threading``` module in Python allows you to run multiple tasks concurrently. This is useful for performance improvements in I/O-bound operations
+
+```python
+import threading
+
+t = threading.Thread(target=function, args=(arg1, arg2))
+# Creates a new thread that runs the specified function with given arguments
+
+t.start()
+# Starts executing the thread
+
+t.join()
+# Waits for the thread to complete before moving on to the next code execution
 ```
