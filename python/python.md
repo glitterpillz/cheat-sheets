@@ -409,23 +409,81 @@ with MyContext() as my_context:
 ## 🔢 Set Methods
 
 ### ```add(item)``` - add item
+    ```python
+    s = {1, 2, 3}
+    s.add(4)
+    # s = {1, 2, 3, 4}
+    ```
 
 ### ```update(iterable)``` - add elements of iterable
+    ```python
+    s.update([5, 6, 7])
+    # s = {1, 2, 3, 4, 5, 6, 7}
+    ```
 
 ### ```discard(item)``` - remove item if present
+    ```python
+    s.discard(3)
+    # s = {1, 2, 4, 5, 6, 7} (no error if item is missing)
+
+    s.discard(100)
+    # No error even though 100 is not in the set
+    ```
 
 ### ```remove(item)``` - remove item or raise KeyError
+    ```python
+    s.remove(2)
+    # s = {1, 4, 5, 6, 7}
+
+    s.remove(100)
+    # ❌ Raises KeyError because 100 is not in the set
+    ```
 
 ### ```pop()``` - remove & return item
+    ```python
+    item = s.pop()
+    # removes a random item from 's' and returns it
+    ```
 
 ### ```clear()``` - remove all items
+    ```python
+    s.clear()   # s = set()
+    ```
 
 ### ```union(*others)``` - union of sets
+    ```python
+    a = {1, 2, 3}
+    b = {3, 4, 5}
+    c = a.union(b)
+    # c = {1, 2, 3, 4, 5} (combines both sets)
+    ```
 
 ### ```intersection(*others)``` - intersection of sets
+    ```python
+    a = {1, 2, 3}
+    b = {2, 3, 4}
+    c = a.intersection(b)
+    # c = {2, 3} (common elements)
+    ```
 
 ### ```difference(*others)``` - difference of sets
+    ```python
+    a = {1, 2, 3, 4}
+    b = {3, 4, 5}
+    c = a.difference(b)
+    # c = {1, 2} (elements in 'a' but not in 'b')
+    ```
 
 ### ```issubset(other)``` - check if subset
+    ```python
+    small = {1, 2}
+    big = {1, 2, 3, 4}
+    is_subset = small.issubset(big)
+    # True (all elements of 'small' are in 'big')
+    ```
 
 ### ```issuperset(other)``` - check if superset
+    ```python
+    is_superset = big.issuperset(small)
+    # True ('big' contains all elements of 'small')
+    ```
