@@ -33,6 +33,8 @@ float = 3.14    # decimal
 bool = True     # boolean
 ```
 
+<hr>
+
 ### Collections
 
 ```python
@@ -260,30 +262,42 @@ with MyContext() as my_context:
 "Python".lower()    # "python"
 ```
 
+<hr>
+
 ### ```upper()``` → uppercase 
 ```python
 "Python".upper()    # "PYTHON"
 ```
+
+<hr>
 
 ### ```strip()``` → remove leading/trailing characters
 ```python
 " Python ".strip()  # "Python"
 ```
 
+<hr>
+
 ### ```split([sep])``` → split by separator  
 ```python
 "Python is cool".split(" ")    # ['Python', 'is', 'cool']
 ```
+
+<hr>
 
 ### ```replace(old, new[, count])``` → replace substring
 ```python
 "Pythin".replace("i", "o")  # "Python"
 ```
 
+<hr>
+
 ### ```find(sub[, start][, end])``` → find substring index
 ```python
 "Python is cool".find("cool")   # 10
 ```
+
+<hr>
 
 ### ```format(*args, **kwargs)``` → format string
 ```python
@@ -308,11 +322,15 @@ lst = [1, 2, 3]
 lst.append(4)   # lst = [1, 2, 3, 4]
 ```
 
+<hr>
+
 ### ```extend(iterable)``` → add elements of iterable
 ```python
 lst = [1, 2, 3]
 lst.extend([4, 5, 6])   # lst = [1, 2, 3, 4, 5, 6]
 ```
+
+<hr>
 
 ### ```insert(index, item)``` → insert item at index 
 ```python
@@ -320,11 +338,15 @@ lst = [1, 2, 3]
 lst.insert(1, 99)   # lst = [1, 99, 2, 3]
 ```
 
+<hr>
+
 ### ```remove(item)``` → remove first occurrence 
 ```python
 lst = [1, 2, 3, 2]
 lst.remove(2)   # lst = [1, 3, 2] (only removes 1st '2')
 ```
+
+<hr>
 
 ### ```pop([index])``` → remove & return item
 ```python
@@ -333,6 +355,8 @@ last_item = lst.pop()   # last_item = 3 | lst = [1, 2]
 second_item = lst.pop(1)    # second_item = 2 | lst = [1]
 ```
 
+<hr>
+
 ### ```index(item[, start][, end])``` → find item index
 ```python
 lst = [10, 20, 30, 40, 30]
@@ -340,11 +364,15 @@ idx = lst.index(30)     # idx = 2 (first occurrence)
 idx2 = lst.index(30, 3)     # idx2 = 4 (finds 30 starting from index 3)
 ```
 
+<hr>
+
 ### ```count(item)``` → count occurrences
 ```python
 lst = [1, 2, 3, 2, 2, 4]
 count - lst.count(2)    # count = 3 (2 appears three times)
 ```
+
+<hr>
 
 ### ```sort([key][, reverse])``` → sort list 
 ```python
@@ -356,6 +384,8 @@ lst.sort(reverse=True)  # lst = [9, 5, 4, 3, 1, 1]
 fruits = ["banana", "apple", "cherry"]
 fruits.sort(key=len)    # sort by length → words = ["apple", "banana", "cherry"]
 ```
+
+<hr>
 
 ### ```reverse()``` → reverse list 
 ```python
@@ -373,15 +403,21 @@ cat = {"name": "Cosmo", "age": 10, "city": "Fairfax"}
 keys = cat.keys()   # dict_keys(['name', 'age', 'city'])
 ```
 
+<hr>
+
 ### ```values()``` → view list of values
 ```python
 values = cat.values()   # dict_values(['Cosmo', 10, 'Fairfax'])
 ```
 
+<hr>
+
 ### ```items()``` → view key-value pairs
 ```python
 items = cat.items()     # dict_items([('name', 'Cosmo'), ('age')])
 ```
+
+<hr>
 
 ### ```get(key[, default])``` → get value for key
 ```python
@@ -389,16 +425,22 @@ age = cat.get("age")    # 10
 toys = cat.get("toys", "Not specified")     # "Not specified" (default value)
 ```
 
+<hr>
+
 ### ```update([other])``` → update dictionary
 ```python
 cat.update({"toys": ["mouse", "bird"], "city": "Tallahassee"})  # cat = {'name': 'Cosmo', 'age': 10, 'city': 'Tallahassee', 'toys': ['mouse', 'bird']}
 ```
+
+<hr>
 
 ### ```pop(key[, default])``` → remove & return value
 ```python
 age = cat.pop("age")    # 10 (removes 'age' from the dictionary)
 missing = cat.pop("behavior", "Not provided")   # "Not provided" (default value)
 ```
+
+<hr>
 
 ### ```clear()``` → remove all items
 ```python
@@ -417,11 +459,15 @@ s.add(4)
 # s = {1, 2, 3, 4}
 ```
 
+<hr>
+
 ### ```update(iterable)``` - add elements of iterable
 ```python
 s.update([5, 6, 7])
 # s = {1, 2, 3, 4, 5, 6, 7}
 ```
+
+<hr>
 
 ### ```discard(item)``` - remove item if present
 ```python
@@ -432,6 +478,8 @@ s.discard(100)
 # No error even though 100 is not in the set
 ```
 
+<hr>
+
 ### ```remove(item)``` - remove item or raise KeyError
 ```python
 s.remove(2)
@@ -441,16 +489,22 @@ s.remove(100)
 # ❌ Raises KeyError because 100 is not in the set
 ```
 
+<hr>
+
 ### ```pop()``` - remove & return item
 ```python
 item = s.pop()
 # removes a random item from 's' and returns it
 ```
 
+<hr>
+
 ### ```clear()``` - remove all items
 ```python
 s.clear()   # s = set()
 ```
+
+<hr>
 
 ### ```union(*others)``` - union of sets
 ```python
@@ -460,6 +514,8 @@ c = a.union(b)
 # c = {1, 2, 3, 4, 5} (combines both sets)
 ```
 
+<hr>
+
 ### ```intersection(*others)``` - intersection of sets
 ```python
 a = {1, 2, 3}
@@ -467,6 +523,8 @@ b = {2, 3, 4}
 c = a.intersection(b)
 # c = {2, 3} (common elements)
 ```
+
+<hr>
 
 ### ```difference(*others)``` - difference of sets
 ```python
@@ -476,6 +534,8 @@ c = a.difference(b)
 # c = {1, 2} (elements in 'a' but not in 'b')
 ```
 
+<hr>
+
 ### ```issubset(other)``` - check if subset
 ```python
 small = {1, 2}
@@ -483,6 +543,8 @@ big = {1, 2, 3, 4}
 is_subset = small.issubset(big)
 # True (all elements of 'small' are in 'big')
 ```
+
+<hr>
 
 ### ```issuperset(other)``` - check if superset
 ```python
@@ -502,6 +564,8 @@ is_superset = big.issuperset(small)
 import re
 ```
 
+<hr>
+
 ### 2️⃣ ```re.search(pattern, string)```
 
 - Finds the first match of the pattern anywhere in the string
@@ -510,6 +574,8 @@ import re
 result = re.search(r"\d", "Price: 100 dollars")
 print(result.group())   # "100"
 ```
+
+<hr>
 
 ### 3️⃣ ```re.match(pattern, string)```
 
@@ -523,6 +589,8 @@ result2 = re.match(r"mom", "Your, mom!")
 print(bool(result2))    # False (does not start with "mom")
 ```
 
+<hr>
+
 ### 4️⃣ ```re.findall(pattern, string)```
 
 - Finds all matches in a string and returns a list
@@ -531,6 +599,8 @@ print(bool(result2))    # False (does not start with "mom")
 result = re.findall(r"\d+", "Order 3 apples, 5 bananas, and 10 oranges")
 print(result)  # ['3', '5', '10']
 ```
+
+<hr>
 
 ### 5️⃣ ```re.sub(pattern, repl, string)```
 
@@ -541,6 +611,8 @@ text = "I love cats! Cats are cute."
 result = re.sub(r"cats", "dogs", text, flags=re.IGNORECASE)
 print(result)  # "I love dogs! Dogs are cute."
 ```
+
+<hr>
 
 ### 🧮 Common Patterns
 
