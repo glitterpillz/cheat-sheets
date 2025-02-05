@@ -22,26 +22,28 @@ comment'''
 ## 🔤 Data Types
 
 ### Primitive
-    ```python
-    str = "Your mom"    # string
 
-    int = 42    # whole number (integer)
+```python
+str = "Your mom"    # string
 
-    float = 3.14    # decimal
+int = 42    # whole number (integer)
 
-    bool = True     # boolean
-    ```
+float = 3.14    # decimal
+
+bool = True     # boolean
+```
 
 ### Collections
-    ```python
-    list = [1, 2, 3]
 
-    tuple = (1, 2, 3)
+```python
+list = [1, 2, 3]
 
-    set = {1, 2, 3}
+tuple = (1, 2, 3)
 
-    dict = {"key": "value"}  # dictionary
-    ```
+set = {1, 2, 3}
+
+dict = {"key": "value"}  # dictionary
+```
 
 
 <br></br>
@@ -228,25 +230,25 @@ with MyContext() as my_context:
 
 ## 🛠️ Built-in Functions
 
-### ```len(obj)``` → length of object
+- ```len(obj)``` → length of object
 
-### ```sum(iterable[, start])``` → sum of elements
+- ```sum(iterable[, start])``` → sum of elements
 
-### ```max(iterable[, key])``` → maximum element
+- ```max(iterable[, key])``` → maximum element
 
-### ```min(iterable[, key])``` → minimum element
+- ```min(iterable[, key])``` → minimum element
 
-### ```sorted(iterable[, key][, reverse])``` → sorted list
+- ```sorted(iterable[, key][, reverse])``` → sorted list
 
-### ```range(stop[, start][, step])``` → sequence of numbers
+- ```range(stop[, start][, step])``` → sequence of numbers
 
-### ```zip(*iterables)``` → iterator of tuples
+- ```zip(*iterables)``` → iterator of tuples
 
-### ```map(function, iterable)``` → apply function to all items
+- ```map(function, iterable)``` → apply function to all items
 
-### ```filter(function, iterable)``` → filter elements by function
+- ```filter(function, iterable)``` → filter elements by function
 
-### ```isinstance(obj, classInfo)``` → check object's class
+- ```isinstance(obj, classInfo)``` → check object's class
 
 
 <br></br>
@@ -486,4 +488,90 @@ is_subset = small.issubset(big)
 ```python
 is_superset = big.issuperset(small)
 # True ('big' contains all elements of 'small')
+```
+
+<br></br>
+
+## 🖼️ Regular Expressions (```re``` module)
+
+### 1️⃣ Import the module → ```import re```
+
+- Before using regular expressions, you need to import Python's built-in ```re``` module
+
+```python
+import re
+```
+
+### 2️⃣ ```re.search(pattern, string)```
+
+- Finds the first match of the pattern anywhere in the string
+
+```python
+result = re.search(r"\d", "Price: 100 dollars")
+print(result.group())   # "100"
+```
+
+### 3️⃣ ```re.match(pattern, string)```
+
+- Checks if the pattern appears at the start of the string
+
+```python
+result = re.match(r"Your", "Your, mom!")
+print(bool(result))     # True
+
+result2 = re.match(r"mom", "Your, mom!")
+print(bool(result2))    # False (does not start with "mom")
+```
+
+### 4️⃣ ```re.findall(pattern, string)```
+
+- Finds all matches in a string and returns a list
+
+```python
+result = re.findall(r"\d+", "Order 3 apples, 5 bananas, and 10 oranges")
+print(result)  # ['3', '5', '10']
+```
+
+### 5️⃣ ```re.sub(pattern, repl, string)```
+
+- Replaces all occurrences of ```pattern``` with ```repl```
+
+```python
+text = "I love cats! Cats are cute."
+result = re.sub(r"cats", "dogs", text, flags=re.IGNORECASE)
+print(result)  # "I love dogs! Dogs are cute."
+```
+
+### 🧮 Common Patterns
+
+| Pattern | Meaning |
+| ------- | ------- |
+| ```\d``` | Digit (0-9) |
+| ```\w``` | Word character (a-z, A-Z, 0-9, _) |
+| ```\s``` | Whitespace (space, tab, newline) |
+| ```.``` | Any character except newline |
+| ```^``` | Start of a string |
+| ```$``` | End of a string |
+| ```*``` | 0 or more occurrences |
+| ```+``` | 1 or more occurrences |
+| ```?``` | 0 or 1 occurrence |
+| ```{n}``` | Exactly ```n``` occurrences |
+| ```{n,}``` | At least ```n``` occurrences |
+| ```{,m}``` | At most ```m``` occurrences |
+| ```{n,m}``` | Between ```n``` and ```m``` occurrences |
+
+#### Examples:
+
+```python
+re.findall(r"\d+", "123 Main St, Apt 4B")  
+# ['123', '4']
+
+re.findall(r"\w+", "Hello, world!")  
+# ['Hello', 'world']
+
+re.findall(r"^Hello", "Hello, world!")  
+# ['Hello'] (matches only if "Hello" is at the start)
+
+re.findall(r"end$", "The story will end")  
+# ['end'] (matches only if "end" is at the end)
 ```
