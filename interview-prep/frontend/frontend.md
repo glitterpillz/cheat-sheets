@@ -375,3 +375,6 @@ In this example:
 
 ### How would you implement a dark mode feature in a web application?
 
+- To implement dark mode, use CSS custom properties (variables) for color schemes and media queries (prefers- color-scheme) to detect system theme preferences
+
+- Provide a toggle option for users to switch manually, storing their preference locally to persist across sessions
